@@ -10,7 +10,8 @@
     "build:ui": "rmdir /s build && cd ../fullstack2021/Osa 2/part2 && npm run build --prod && Xcopy /E build ..\\..\\..\\fullstack2021_Osa3_harjoitus\\build\\",
     "deploy": "git push heroku",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "Joonas Räikkönen",
   "license": "ISC",
@@ -21,6 +22,8 @@
     "mongoose": "^5.12.2"
   },
   "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
     "nodemon": "^2.0.7"
   }
 }
